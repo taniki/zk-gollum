@@ -1,0 +1,12 @@
+[Unit]
+Description=Gollum wiki server
+After=network.target
+
+[Service]
+Type=simple
+#User=%i
+ExecStart=/usr/local/bin/gollum --config /home/tk/code/zk-web/config.rb /home/tk/zettelkasten
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
